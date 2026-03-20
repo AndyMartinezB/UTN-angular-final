@@ -1,59 +1,99 @@
-# UtnAngularFinal
+# Chat App -- Trabajo Final Integrador (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+## Descripción
 
-## Development server
+Esta aplicación es una simulación de una interfaz de mensajería
+desarrollada con Angular moderno.\
+Permite visualizar una lista de chats, crear nuevos contactos y enviar
+mensajes dentro de cada conversación.
 
-To start a local development server, run:
+El objetivo del proyecto es aplicar conceptos fundamentales del
+framework Angular como:
 
-```bash
-ng serve
-```
+- Componentes standalone
+- Routing
+- Formularios reactivos
+- Manejo de estado con Signals
+- Arquitectura modular
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+- Visualización de lista de chats
+- Creación de nuevos chats
+- Envío de mensajes dentro de cada conversación
+- Respuesta automática simulada
+- Persistencia local usando `localStorage`
+- Interfaz dividida en sidebar de chats y área de conversación
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tecnologías utilizadas
 
-```bash
-ng generate component component-name
-```
+- Angular
+- TypeScript
+- HTML
+- CSS
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Arquitectura del proyecto
 
-```bash
-ng generate --help
-```
+La aplicación se organiza principalmente en:
 
-## Building
+    src/app
+    │
+    ├── models
+    │   ├── chat.ts
+    │   └── message.ts
+    │
+    ├── services
+    │   └── chat.service.ts
+    │
+    ├── views
+    │   ├── chats
+    │   ├── chat
+    │   └── nuevo-chat
+    │
+    └── app.routes.ts
 
-To build the project run:
+### Componentes principales
 
-```bash
-ng build
-```
+**Chats** - Vista principal que contiene el layout de la aplicación. -
+Incluye la lista de chats y el área de conversación.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Chat** - Muestra los mensajes de una conversación específica. -
+Permite enviar nuevos mensajes.
 
-## Running unit tests
+**NuevoChat** - Formulario para crear una nueva conversación.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Servicio
 
-```bash
-ng test
-```
+**ChatService**
 
-## Running end-to-end tests
+Centraliza la lógica de la aplicación:
 
-For end-to-end (e2e) testing, run:
+- gestión de chats
+- envío de mensajes
+- simulación de respuestas automáticas
+- persistencia en `localStorage`
 
-```bash
-ng e2e
-```
+## Persistencia de datos
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+La aplicación utiliza `localStorage` del navegador para simular
+persistencia de datos.\
+De esta forma los chats y mensajes permanecen disponibles incluso
+después de recargar la página.
 
-## Additional Resources
+## Ejecución del proyecto
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Instalar dependencias:
+
+    npm install
+
+Ejecutar el servidor de desarrollo:
+
+    ng serve
+
+Abrir en el navegador:
+
+    http://localhost:4200
+
+## Autor
+
+Proyecto desarrollado como trabajo práctico integrador de Angular.
