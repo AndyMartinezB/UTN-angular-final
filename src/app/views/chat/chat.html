@@ -11,4 +11,10 @@
       </div>
     }
   </div>
+
+  <form class="message-form" (submit)="sendMessage(); $event.preventDefault()">
+    <input type="text" placeholder="Escribir mensaje..." [formControl]="messageControl" />
+
+    <button type="submit">Enviar</button>
+  </form>
 }

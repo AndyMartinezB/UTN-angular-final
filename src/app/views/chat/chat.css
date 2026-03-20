@@ -1,23 +1,15 @@
-.messages {
+.message-form {
   display: flex;
-  flex-direction: column;
   gap: 10px;
   padding: 10px;
+  border-top: 1px solid #ddd;
 }
 
-.message {
-  max-width: 60%;
+.message-form input {
+  flex: 1;
+  padding: 8px;
+}
+
+.message-form button {
   padding: 8px 12px;
-  background: #eee;
-  border-radius: 10px;
-}
-
-.message.user {
-  align-self: flex-end;
-  background: #d1f4ff;
-}
-
-.avatar {
-  width: 40px;
-  border-radius: 50%;
 }
