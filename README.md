@@ -3,14 +3,13 @@
 ## Descripción
 
 Esta aplicación es una simulación de una interfaz de mensajería
-desarrollada con Angular moderno.\
-Permite visualizar una lista de chats, crear nuevos contactos y enviar
+desarrollada con Angular.
+Esta app permite visualizar una lista de chats, crear nuevos contactos y enviar
 mensajes dentro de cada conversación.
 
-El objetivo del proyecto es aplicar conceptos fundamentales del
-framework Angular como:
+El objetivo del proyecto fue aplicar conceptos vistos en
+el Curso de Desarrollo en Angular UTN.BA, tales como:
 
-- Componentes standalone
 - Routing
 - Formularios reactivos
 - Manejo de estado con Signals
@@ -94,6 +93,6 @@ Abrir en el navegador:
 
     http://localhost:4200
 
-## Autor
+## Creditos
 
-Proyecto desarrollado como trabajo práctico integrador de Angular.
+Andrés Martínez Bologna. 2026. Curso de Desarrollo en Angular UTN.BA.
