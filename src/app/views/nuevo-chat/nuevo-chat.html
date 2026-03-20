@@ -5,7 +5,7 @@
     <form (submit)="createChat(); $event.preventDefault()">
       <label for="name">Nombre del contacto</label>
 
-      <input id="name" type="text" placeholder="Nombre..." [formControl]="nameControl" />
+      <input #nameInput id="name" type="text" placeholder="Nombre..." [formControl]="nameControl" />
 
       @if (nameControl.invalid && nameControl.touched) {
         <div class="error">El nombre es obligatorio</div>

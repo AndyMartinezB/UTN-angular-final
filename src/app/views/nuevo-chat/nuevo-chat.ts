@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ChatService } from '../../services/chat.service';
@@ -10,11 +10,18 @@ import { ChatService } from '../../services/chat.service';
   templateUrl: './nuevo-chat.html',
   styleUrl: './nuevo-chat.css',
 })
-export class NuevoChat {
+export class NuevoChat implements AfterViewInit {
   private chatService = inject(ChatService);
   private router = inject(Router);
 
+  @ViewChild('nameInput')
+  nameInput!: ElementRef<HTMLInputElement>;
+
   nameControl = new FormControl('', [Validators.required]);
+
+  ngAfterViewInit() {
+    this.nameInput.nativeElement.focus();
+  }
 
   createChat() {
     const name = this.nameControl.value;
