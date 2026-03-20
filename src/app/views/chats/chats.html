@@ -1,3 +1,19 @@
-<h1>Chats</h1>
+<div class="layout">
+  <div class="sidebar">
+    <div class="header">
+      <h2>Chats</h2>
 
-<app-chat-list></app-chat-list>
+      <a routerLink="/nuevo" class="new-chat-button"> + Nuevo chat </a>
+    </div>
+
+    <app-chat-list></app-chat-list>
+  </div>
+
+  <div class="chat-area">
+    <router-outlet #outlet="outlet"></router-outlet>
+
+    @if (!outlet.isActivated) {
+      <div class="placeholder">Selecciona un chat para comenzar</div>
+    }
+  </div>
+</div>

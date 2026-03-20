@@ -5,7 +5,12 @@ import { NuevoChat } from './views/nuevo-chat/nuevo-chat';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'chats', pathMatch: 'full' },
-  { path: 'chats', component: Chats },
-  { path: 'chats/:id', component: Chat },
+
+  {
+    path: 'chats',
+    component: Chats,
+    children: [{ path: ':id', component: Chat }],
+  },
+
   { path: 'nuevo', component: NuevoChat },
 ];

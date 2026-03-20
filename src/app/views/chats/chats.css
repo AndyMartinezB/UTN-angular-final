@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ddd;
+  padding: 10px;
+}
+
+.chat-area {
+  flex: 1;
+  padding: 10px;
+}
+.chat-area {
+  flex: 1;
+  padding: 10px;
+  position: relative;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 18px;
+}
