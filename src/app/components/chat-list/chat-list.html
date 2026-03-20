@@ -1,1 +1,17 @@
-<p>chat-list works!</p>
+<div class="chat-list">
+  @for (chat of chats(); track chat.id) {
+    <a class="chat-item" [routerLink]="['/chats', chat.id]">
+      <img [src]="chat.avatar" class="avatar" />
+
+      <div class="info">
+        <div class="name">{{ chat.name }}</div>
+
+        @if (chat.status === 'online') {
+          <div class="status online">online</div>
+        } @else {
+          <div class="status offline">offline</div>
+        }
+      </div>
+    </a>
+  }
+</div>

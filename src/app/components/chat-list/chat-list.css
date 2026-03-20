@@ -1,0 +1,28 @@
+.chat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: black;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.status.online {
+  color: green;
+}
+
+.status.offline {
+  color: gray;
+}
