@@ -26,6 +26,31 @@
   display: flex;
   flex-direction: column;
 }
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  margin: 0;
+}
+.new-chat-button {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  width: fit-content;
+  transition: background 0.2s;
+}
+
+.new-chat-button:hover {
+  background: #1565c0;
+}
 .placeholder {
   position: absolute;
   inset: 0;
