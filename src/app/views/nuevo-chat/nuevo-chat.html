@@ -1,13 +1,17 @@
-<h2>Nuevo Chat</h2>
+<div class="new-chat-container">
+  <div class="new-chat-card">
+    <h2>Nuevo Chat</h2>
 
-<form (submit)="createChat(); $event.preventDefault()">
-  <label> Nombre del contacto </label>
+    <form (submit)="createChat(); $event.preventDefault()">
+      <label for="name">Nombre del contacto</label>
 
-  <input type="text" placeholder="Nombre..." [formControl]="nameControl" />
+      <input id="name" type="text" placeholder="Nombre..." [formControl]="nameControl" />
 
-  @if (nameControl.invalid && nameControl.touched) {
-    <div class="error">El nombre es obligatorio</div>
-  }
+      @if (nameControl.invalid && nameControl.touched) {
+        <div class="error">El nombre es obligatorio</div>
+      }
 
-  <button type="submit" [disabled]="nameControl.invalid">Crear chat</button>
-</form>
+      <button type="submit" [disabled]="nameControl.invalid">Crear chat</button>
+    </form>
+  </div>
+</div>

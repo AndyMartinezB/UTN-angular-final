@@ -1,24 +1,31 @@
 .layout {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar {
   width: 300px;
   border-right: 1px solid #ddd;
   padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.chat-area {
+.sidebar app-chat-list {
   flex: 1;
-  padding: 10px;
+  overflow-y: auto;
 }
+
 .chat-area {
   flex: 1;
   padding: 10px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
-
 .placeholder {
   position: absolute;
   inset: 0;
