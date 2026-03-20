@@ -1,1 +1,14 @@
-<p>chat works!</p>
+@if (chat()) {
+  <div class="chat-header">
+    <img [src]="chat()!.avatar" class="avatar" />
+    <h2>{{ chat()!.name }}</h2>
+  </div>
+
+  <div class="messages">
+    @for (message of chat()!.messages; track message.id) {
+      <div class="message" [class.user]="message.sender === 'user'">
+        {{ message.text }}
+      </div>
+    }
+  </div>
+}
