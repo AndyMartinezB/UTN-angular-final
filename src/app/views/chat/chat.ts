@@ -14,11 +14,11 @@ export class Chat {
   private route = inject(ActivatedRoute);
   private chatService = inject(ChatService);
 
-  chatId = Number(this.route.snapshot.paramMap.get('id'));
+  chatId = Number(this.route.snapshot.paramMap.get('id')!);
 
   chat = computed(() => this.chatService.getChat(this.chatId));
 
-  messageControl = new FormControl('');
+  messageControl = new FormControl<string>('');
 
   sendMessage() {
     const text = this.messageControl.value;

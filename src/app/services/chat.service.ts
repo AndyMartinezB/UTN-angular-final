@@ -29,7 +29,7 @@ export class ChatService {
     return this.chatsSignal().find((c) => c.id === id);
   }
 
-  createChat(name: string) {
+  createChat(name: string): Chat {
     const newChat: Chat = {
       id: Date.now(),
       name,
@@ -39,6 +39,8 @@ export class ChatService {
     };
 
     this.chatsSignal.update((chats) => [...chats, newChat]);
+
+    return newChat;
   }
 
   sendMessage(chatId: number, text: string) {
